@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHS FOTL | Global Infrastructure Mastery</title>
+    <!-- 引入 Tailwind CSS (高端设计框架) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 AOS 动画库 (实现 Upper.services 类似的入场动画) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap');
+        
+        :root { --brand-blue: #3b82f6; }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #fff; 
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        /* 视频/图片背景蒙版 */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+        }
+
+        /* 模仿 Upper.services 的超大排版 */
+        .mega-title {
+            font-size: clamp(3rem, 12vw, 10rem);
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+        }
+
+        .service-card img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-card:hover img { transform: scale(1.1); }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .mega-title { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 导航栏 (滚动变色) -->
+    <nav class="fixed w-full z-50 transition-all duration-500 px-6 py-6 md:px-12 flex justify-between items-center" id="navbar">
+        <div class="text-2xl font-black tracking-tighter uppercase text-white transition-colors duration-500" id="navLogo">RHS FOTL</div>
+        
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-colors duration-500" id="navLinks">
+            <a href="#about" class="hover:text-blue-500 transition">About</a>
+            <a href="#services" class="hover:text-blue-500 transition">Services</a>
+            <a href="#locations" class="hover:text-blue-500 transition">Global</a>
+            <a href="mailto:info@rhsfotl.com" class="border border-white/30 px-5 py-2 hover:bg-white hover:text-black transition duration-300" id="navBtn">Get a Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (全球化视野) -->
+    <section class="relative h-screen flex items-center justify-start overflow-hidden bg-black">
+        <!-- 自动加载的高质科技感图片 -->
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
+             class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Global Network">
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="relative z-10 px-6 md:px-12 w-full">
+            <h1 class="mega-title font-black text-white uppercase" data-aos="fade-up" data-aos-duration="1500">
+                Global <br><span class="text-blue-500">Infrastructure</span> <br>Mastery
+            </h1>
+            <p class="text-white/60 text-lg md:text-2xl font-light mt-8 max-w-2xl" data-aos="fade-up" data-aos-delay="500">
+                FOTL is the critical extension of your enterprise. We set the global benchmark for reliable, rapid technical support.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section (公司介绍) -->
+    <section id="about" class="py-32 md:py-48 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-5" data-aos="fade-right">
+                <span class="text-blue-600 font-bold uppercase tracking-[0.3em] text-xs">Standard in Engineering</span>
+                <h2 class="text-4xl md:text-7xl font-black mt-6 uppercase leading-[0.9]">Reliable. <br>Rapid. <br>Certified.</h2>
+            </div>
+            <div class="lg:col-span-7 text-lg md:text-xl text-gray-500 leading-relaxed space-y-8" data-aos="fade-left">
+                <p>FOTL is not merely a service provider; we are the critical extension of your enterprise infrastructure. In the era of decentralized, multi-region IT architectures, we set the global benchmark for reliable, rapid, and certified on-site technical support.</p>
+                <p>Managing complex assets across fragmented global footprints demands precision, speed, and unwavering expertise. FOTL delivers this standard by activating our extensive network of certified field engineers directly at your data centers, colocation facilities, and crucial edge locations worldwide.</p>
+                <div class="pt-6">
+                    <p class="text-black font-semibold border-l-4 border-blue-600 pl-6 text-2xl uppercase italic tracking-tighter">
+                        "First Off The Line response, guaranteeing absolute continuity."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Grid (服务介绍) -->
+    <section id="services" class="py-32 bg-gray-50 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24" data-aos="fade-up">
+                <h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter">Mission Critical</h2>
+                <p class="text-xl text-gray-400 mt-4 uppercase tracking-[0.2em]">Precision Remote Hands • 24/7/365</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- A -->
+                <div class="service-card group bg-white overflow-hidden" data-aos="fade-up">
+                    <div class="h-[400px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-black uppercase mb-4">A. Crisis Intervention</h3>
+                        <p class="text-gray-500">Rapid Response SLAs. Advanced diagnostics, port status verification, and hardware resuscitation (power cycling, hard reboots).</p>
+                    </div>
+                </div>
+                <!-- B -->
+                <div class="service-card group bg-white overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-[400px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-black uppercase mb-4">B. Deployment & Config</h3>
+                        <p class="text-gray-500">Full Rack & Stack. Physical installation of switches/servers, component swapping, and initial secure console access.</p>
+                    </div>
+                </div>
+                <!-- C -->
+                <div class="service-card group bg-white overflow-hidden" data-aos="fade-up">
+                    <div class="h-[400px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-black uppercase mb-4">C. Network Integrity</h3>
+                        <p class="text-gray-500">Certified Patching (Fiber/Copper). Fluke certification, TIA/EIA standards, and real-time asset documentation.</p>
+                    </div>
+                </div>
+                <!-- D -->
+                <div class="service-card group bg-white overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-[400px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-black uppercase mb-4">D. Asset Governance</h3>
+                        <p class="text-gray-500">Secure Logistics & Decommissioning. Management of equipment receiving, auditing, tagging, and compliant disposal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Hubs (更新后的地址) -->
+    <section id="locations" class="py-32 bg-black text-white px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-8xl font-black uppercase mb-20 tracking-tighter" data-aos="fade-up">Global Density</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center" data-aos="fade-up">
+                <div>
+                    <div class="text-blue-500 font-black text-3xl md:text-5xl mb-4">EMEA</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Europe, Middle East, Africa</p>
+                </div>
+                <div>
+                    <div class="text-blue-500 font-black text-3xl md:text-5xl mb-4">ASIA</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Pacific & Central Asia</p>
+                </div>
+                <div>
+                    <div class="text-blue-500 font-black text-3xl md:text-5xl mb-4">NORTH</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">America & Canada</p>
+                </div>
+                <div>
+                    <div class="text-blue-500 font-black text-3xl md:text-5xl mb-4">SOUTH</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Latin America</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-white pt-32 pb-12 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 border-b border-gray-100 pb-20">
+            <div data-aos="fade-right">
+                <h2 class="text-5xl md:text-7xl font-black uppercase mb-10 leading-none">Ready for <br>Technical Mastery?</h2>
+                <a href="mailto:info@rhsfotl.com" class="text-2xl md:text-4xl font-light underline underline-offset-8 decoration-blue-600 hover:text-blue-600 transition">
+                    info@rhsfotl.com
+                </a>
+            </div>
+            <div class="flex flex-col justify-end" data-aos="fade-left">
+                <p class="text-gray-500 text-lg mb-6">Contact our Command Center for a comprehensive strategy consultation.</p>
+                <div class="flex space-x-6">
+                    <span class="bg-gray-100 px-4 py-2 text-xs font-bold uppercase tracking-widest">Global Response</span>
+                    <span class="bg-gray-100 px-4 py-2 text-xs font-bold uppercase tracking-widest">ISO Certified</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-10 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.4em] text-gray-400">
+            <p>© 2025 RHS FOTL. WHERE GLOBAL RELIABILITY MEETS TECHNICAL MASTERY.</p>
+            <div class="flex space-x-8 mt-6 md:mt-0 uppercase">
+                <a href="#" class="hover:text-black transition">Privacy Policy</a>
+                <a href="#" class="hover:text-black transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 动画与交互脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // 初始化 AOS 动画
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-quart' });
+
+        // 导航栏滚动效果：从透明变白
+        const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('navLogo');
+        const navLinks = document.getElementById('navLinks');
+        const navBtn = document.getElementById('navBtn');
+
+        window.onscroll = function() {
+            if (window.scrollY > 80) {
+                navbar.classList.add('bg-white', 'shadow-xl', 'py-4');
+                navbar.classList.remove('py-6');
+                navLogo.classList.replace('text-white', 'text-black');
+                navLinks.classList.replace('text-white', 'text-black');
+                navBtn.classList.replace('border-white/30', 'border-black/10');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-xl', 'py-4');
+                navbar.classList.add('py-6');
+                navLogo.classList.replace('text-black', 'text-white');
+                navLinks.classList.replace('text-black', 'text-white');
+                navBtn.classList.replace('border-black/10', 'border-white/30');
+            }
+        };
+    </script>
+</body>
+</html>
